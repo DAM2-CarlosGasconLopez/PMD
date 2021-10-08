@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">P1-MiCalculadora</string>
+    <string name="bienvenido">Bienvenidos a mi APP</string>
+    <string name="bienvenidodd">Calculadora</string>
+    <string name="numuno">Introduzca el primer número:</string>
+    <string name="numdos">Introduzca el segundo número:</string>
+    <string name="hinuno">Número 1</string>
+    <string name="hindos">Número 2</string>
+    <string name="ress">El resultado de la operacion es:</string>
+
+
+    <string name="btnSum">SUMAR</string>
+    <string name="btnRes">RESTAR</string>
+    <string name="btnMult">MULT</string>
+    <string name="btnDiv">DIVIDIR</string>
+
+
+</resources>
+

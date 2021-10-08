@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">P1-MyCalculator</string>
+    <string name="bienvenido">Welcome to my APP</string>
+    <string name="bienvenidodd">Calculator</string>
+    <string name="numuno">Introduce the first number:</string>
+    <string name="numdos">Introduce the second number:</string>
+    <string name="hinuno">Number 1</string>
+    <string name="hindos">Number 2</string>
+
+
+    <string name="ress">The resoult of the operation is:</string>
+    <string name="btnSum">EQUAL</string>
+    <string name="btnRes">SUBST</string>
+    <string name="btnMult">MULT</string>
+    <string name="btnDiv">DIVIDE</string>
+</resources>
