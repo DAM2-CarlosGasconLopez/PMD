@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/carlo/OneDrive/Escritorio/DAM2/PMD/1Trimestre/P3-Quizzes/app/src/main/res/layout/activity_main.xml" value="0.3020833333333333" />
+        <entry key="..\:/Users/carlo/OneDrive/Escritorio/DAM2/PMD/1Trimestre/P3-Quizzes/app/src/main/res/layout/activity_seguir_pregunta.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/carlo/OneDrive/Escritorio/Practtica6_Quizzes/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/carlo/OneDrive/Escritorio/Practtica6_Quizzes/app/src/main/res/layout/activity_second.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/carlo/OneDrive/Escritorio/Practtica6_Quizzes/app/src/main/res/layout/activity_seguir_pregunta.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practtica6_Quizzes/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/laura/OneDrive/Documentos/INSTITUTO/DAM2/PMD/1Trimestre/Practtica6_Quizzes/app/src/main/res/layout/activity_second.xml" value="0.24010416666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
