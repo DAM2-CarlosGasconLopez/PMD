@@ -35,12 +35,12 @@ public class SeguirPregunta extends AppCompatActivity {
 
         btnPasar.setOnClickListener(view -> {
 
-            if (cont != 3){
-                super.onBackPressed();
-            }else{
-                Intent vuelta = new Intent(this, MainActivity.class);
-                startActivity(vuelta);
-            }
+           if (!btnPasar.getText().equals("Volver a empezar")) {
+               super.onBackPressed();
+           }else{
+            Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
+           }
 
 
         });

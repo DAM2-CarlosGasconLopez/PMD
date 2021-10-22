@@ -68,15 +68,19 @@ public class MainActivity extends AppCompatActivity {
 
         //Guadarmos si la respuesta dada es correcta
         if (preguntas[preguntaActual].getRespuestaCorrecta()== resulSelec){
+            preguntaActual++;
 
             // Llamamos al metodo para cambiar de pantalla
             segundaPantalla();
 
-            // Cambiamos la pregunta
-            preguntaActual++;
+
 
             // Cambiamos la pregunta
             cambiarPregunta();
+
+
+
+
 
             // Refrescamos lo botones para que no esten checkeados
             refrescarRadioButtons();
@@ -123,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void cambiarPregunta(){
+
 
         // Cambiamos el número de la pregunta
         Pregunta numPreg = preguntas[preguntaActual];
