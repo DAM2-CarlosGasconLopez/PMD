@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Se cargan tres preguntas
-        preguntas[0] = new Pregunta("1/3", "Rey de España en 2021", "Felipe VI", "Felipe V", "Juan Carlos I", 1);
-        preguntas[1] = new Pregunta("2/3", "Heredera de la corona", "Letizia Ortiz", "Sofia de Borbon", "Leonor de Borbon", 3);
-        preguntas[2] = new Pregunta("3/3", "Residencia habitual de los reyes", "Palacio de Oriente", "Palacio la Zarzuela", "Palacio de los maestres de Santiago.", 2);
+        preguntas[0] = new Pregunta("1/3", "¿En que comarca esta Cantavieja?", "Maestrazgo", "Gudar Javalambre", "Albarracín", 1);
+        preguntas[1] = new Pregunta("2/3", "¿Cuantos habitantes tiene \n            Cantavieja?", "942", "689", "728", 3);
+        preguntas[2] = new Pregunta("3/3", "¿A que altura se encuentra \n             Cantavieja?", "1401m", "1290m", "1103m", 2);
 
         //Se asocian los elementos del diseño
         pregunta = (TextView) findViewById(R.id.txtvPregunta);
@@ -65,13 +65,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Guadarmos si la respuesta dada es correcta
-        if (preguntas[0].getRespuestaCorrecta()== resulSelec){
+        if (preguntas[preguntaActual].getRespuestaCorrecta()== resulSelec){
             buenas++;
             preguntaActual++;
 
             // Llamamos al metodo para cambiar de pantalla
             segundaPantalla();
 
+            // Cambiamos la pregunta
             cambiarPregunta();
 
             // Refrescamos lo botones para que no esten checkeados
@@ -87,8 +88,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void segundaPantalla() {
 
-        //Intent intent = new Intent(this, ActivitySegundo.class);
-        //startActivity(intent);
+        // Pasamos lo que nos hace falta en la segunda pantalla, para pasar de pregunta
+         // Si la pregunta no es la ultima ...
+        if (preguntaActual<3){
+            Intent intent = new Intent(this,SeguirPregunta.class);
+            intent.putExtra("Resultado", "RIGTH !!");
+            intent.putExtra("Boton","Siguiente pregunta");
+            startActivity(intent);
+        }
+        // // Pasamos lo que nos hace falta en la segunda pantalla, para volver a empezar el programa
+        else{
+            Intent intent = new Intent(this,SeguirPregunta.class);
+            intent.putExtra("Resultado", "Partida acabada");
+            intent.putExtra("Boton","Volver a empezar");
+            startActivity(intent);
+        }
 
     }
 
