@@ -7,18 +7,18 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txtvNumero"
+        android:id="@+id/txtNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:text="1/3"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtvPregunta"
+        app:layout_constraintBottom_toTopOf="@+id/txtPregunta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txtvPregunta"
+        android:id="@+id/txtPregunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"

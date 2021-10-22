@@ -10,20 +10,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
     //Declaramos los botones y llamamos a la clase pregunta
     private Pregunta[] preguntas = new Pregunta[3];
     RadioButton rbtn1, rbtn2,rbtn3;
     TextView pregunta, numContador;
-    Button botonSend;
+    Button btnEnviar;
 
 
     private int preguntaActual;
-    int buenas = 0;
-    int malas = 0;
+
 
     @Override
     //Cuando se abre la aplicacion
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -33,17 +34,17 @@ public class MainActivity extends AppCompatActivity {
         preguntas[2] = new Pregunta("3/3", "¿A que altura se encuentra \n             Cantavieja?", "1401m", "1290m", "1103m", 2);
 
         //Se asocian los elementos del diseño
-        pregunta = (TextView) findViewById(R.id.txtvPregunta);
-        numContador = (TextView) findViewById(R.id.txtvNumero);
+        pregunta = (TextView) findViewById(R.id.txtPregunta);
+        numContador = (TextView) findViewById(R.id.txtNum);
 
         rbtn1 = (RadioButton) findViewById(R.id.rbtnUno);
         rbtn2 = (RadioButton) findViewById(R.id.rbtnDos);
         rbtn3 = (RadioButton) findViewById(R.id.rbtnTres);
-        botonSend=(Button)findViewById(R.id.btnSend);
+        btnEnviar =(Button)findViewById(R.id.btnSend);
 
 
         //Cuando se pulsa el boton enviar
-        botonSend.setOnClickListener(view -> {
+        btnEnviar.setOnClickListener(view -> {
             validacionPregunta();
 
         });
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void validacionPregunta() {
+
         //Obtenemos lo que el usuario a seleccionado
         int resulSelec=0;
         if (rbtn1.isChecked()){
@@ -66,11 +68,12 @@ public class MainActivity extends AppCompatActivity {
 
         //Guadarmos si la respuesta dada es correcta
         if (preguntas[preguntaActual].getRespuestaCorrecta()== resulSelec){
-            buenas++;
-            preguntaActual++;
 
             // Llamamos al metodo para cambiar de pantalla
             segundaPantalla();
+
+            // Cambiamos la pregunta
+            preguntaActual++;
 
             // Cambiamos la pregunta
             cambiarPregunta();
@@ -79,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             refrescarRadioButtons();
 
         }else{
-            malas++;
+
             Toast.makeText(this,"Respuesta incorrecta", Toast.LENGTH_SHORT).show();
 
         }
@@ -94,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this,SeguirPregunta.class);
             intent.putExtra("Resultado", "RIGTH !!");
             intent.putExtra("Boton","Siguiente pregunta");
+            intent.putExtra("Bool", false);
             startActivity(intent);
         }
         // // Pasamos lo que nos hace falta en la segunda pantalla, para volver a empezar el programa
@@ -101,7 +105,12 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this,SeguirPregunta.class);
             intent.putExtra("Resultado", "Partida acabada");
             intent.putExtra("Boton","Volver a empezar");
+            intent.putExtra("Bool", true);
+            intent.putExtra("cont",preguntaActual);
+
             startActivity(intent);
+
+
         }
 
     }

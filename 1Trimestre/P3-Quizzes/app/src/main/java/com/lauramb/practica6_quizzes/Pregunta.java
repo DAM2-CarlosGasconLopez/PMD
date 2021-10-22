@@ -43,7 +43,6 @@ public class Pregunta {
     public Pregunta(String numero, String pregunta, String rb1, String rb2, String rb3, int respuestaCorrecta) {
         this.numero = numero;
         this.pregunta = pregunta;
-
         this.respuesta [0] = rb1;
         this.respuesta [1] = rb2;
         this.respuesta[2] = rb3;
