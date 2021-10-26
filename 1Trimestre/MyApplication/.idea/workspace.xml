@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21cadf51-94a6-4fe4-91d4-87a004442bae" name="Default Changelist" comment="" />
+    <list default="true" id="21cadf51-94a6-4fe4-91d4-87a004442bae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../9Lista_Personalizada/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../9Lista_Personalizada/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../9Lista_Personalizada/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../9Lista_Personalizada/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../9Lista_Personalizada/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../9Lista_Personalizada/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
