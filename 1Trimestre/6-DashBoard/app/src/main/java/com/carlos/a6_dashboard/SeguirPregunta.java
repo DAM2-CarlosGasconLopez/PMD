@@ -1,16 +1,14 @@
-package com.carlos.a6_dashboard.Activity;
+package com.carlos.a6_dashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.carlos.a6_dashboard.R;
-
-public class Amigos_Activity extends AppCompatActivity {
+public class SeguirPregunta extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_amigos);
+        setContentView(R.layout.activity_seguir_pregunta);
     }
 }

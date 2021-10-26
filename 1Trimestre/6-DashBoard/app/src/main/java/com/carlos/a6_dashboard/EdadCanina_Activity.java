@@ -1,4 +1,4 @@
-package com.carlos.a6_dashboard.Activity;
+package com.carlos.a6_dashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
