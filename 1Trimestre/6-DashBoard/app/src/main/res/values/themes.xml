@@ -50,6 +50,15 @@
 
     </style>
 
+    //Siguiente
+    <style name="SiguienteTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryDark">@color/green_dark</item>
+        <item name="colorAccent">@color/green</item>
+
+    </style>
+
     // Galeria
     <style name="GaleriaTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
 

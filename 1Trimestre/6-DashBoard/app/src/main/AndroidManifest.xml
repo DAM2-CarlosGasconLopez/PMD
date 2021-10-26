@@ -9,42 +9,47 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.6DashBoard">
+
         <activity
-            android:name=".Activity.Herramientas_Activity"
-            android:theme="@style/SettingsTheme"
-            android:exported="true" />
+            android:name=".Herramientas_Activity"
+            android:exported="true"
+            android:theme="@style/SettingsTheme" />
         <activity
-            android:name=".Activity.Restaurantes_Activity"
-            android:theme="@style/RestauranteTheme"
-            android:exported="true" />
+            android:name=".Restaurantes_Activity"
+            android:exported="true"
+            android:theme="@style/RestauranteTheme" />
         <activity
-            android:name=".Activity.Mapas_Activity"
-            android:theme="@style/MapasTheme"
-            android:exported="true" />
+            android:name=".Mapas_Activity"
+            android:exported="true"
+            android:theme="@style/MapasTheme" />
         <activity
-            android:name=".Activity.Galeria_Activity"
-            android:theme="@style/GaleriaTheme"
-            android:exported="true" />
+            android:name=".Galeria_Activity"
+            android:exported="true"
+            android:theme="@style/GaleriaTheme" />
         <activity
-            android:name=".Activity.Quizzes_Activity"
-            android:theme="@style/QuizzesTheme"
-            android:exported="true" />
+            android:name=".Quizzes_Activity"
+            android:exported="true"
+            android:theme="@style/QuizzesTheme" />
         <activity
-            android:name=".Activity.EdadCanina_Activity"
-            android:theme="@style/PerreteTheme"
-            android:exported="true" />
+            android:name=".SeguirPregunta"
+            android:exported="true"
+            android:theme="@style/SiguienteTheme" />
         <activity
-            android:name=".Activity.Amigos_Activity"
-            android:theme="@style/AmigosTheme"
-            android:exported="true" />
+            android:name=".EdadCanina_Activity"
+            android:exported="true"
+            android:theme="@style/PerreteTheme" />
         <activity
-            android:name=".Activity.Calculadora_Activity"
-            android:theme="@style/CalculadoraTheme"
-            android:exported="true" />
+            android:name=".Amigos_Activity"
+            android:exported="true"
+            android:theme="@style/AmigosTheme" />
+        <activity
+            android:name=".Calculadora_Activity"
+            android:exported="true"
+            android:theme="@style/CalculadoraTheme" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

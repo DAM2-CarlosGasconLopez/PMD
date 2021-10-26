@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">6-DashBoard</string>
+
+    <!-- CALCULADORA -->
+    <string name="bienvenido">Bienvenidos a mi APP</string>
+    <string name="bienvenidodd">Calculadora</string>
+    <string name="numuno">Introduzca el primer número:</string>
+    <string name="numdos">Introduzca el segundo número:</string>
+    <string name="hinuno">Número 1</string>
+    <string name="hindos">Número 2</string>
+    <string name="ress">El resultado de la operacion es:</string>
+
+
+    <string name="btnSum">SUMAR</string>
+    <string name="btnRes">RESTAR</string>
+    <string name="btnMult">MULT</string>
+    <string name="btnDiv">DIVIDIR</string>
+
+    <string name="pregunta1">¿En que comarca esta Cantavieja?</string>
+    <string name="pregunta2">¿Cuantos habitantes tiene \n            Cantavieja?</string>
+    <string name="pregunta3">¿A que altura se encuentra \n             Cantavieja?</string>
+    <string name="result1">Maestrazgo</string>
+    <string name="result2">Gudar Javalambre</string>
+    <string name="result3">Albarracín</string>
+    <string name="toast1">No has seleccionado ninguna opción</string>
+    <string name="toast2">Respuesta incorrecta</string>
+    <string name="btnSiguiente1">Siguiente pregunta</string>
+    <string name="end">Partida Acabada</string>
+    <string name="btnSiguiente2">Volver a empezar</string>
 </resources>

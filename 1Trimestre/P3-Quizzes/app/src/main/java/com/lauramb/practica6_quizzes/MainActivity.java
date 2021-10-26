@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Se cargan tres preguntas
-        preguntas[0] = new Pregunta("1/3", "¿En que comarca esta Cantavieja?", "Maestrazgo", "Gudar Javalambre", "Albarracín", 1);
-        preguntas[1] = new Pregunta("2/3", "¿Cuantos habitantes tiene \n            Cantavieja?", "942", "689", "728", 3);
-        preguntas[2] = new Pregunta("3/3", "¿A que altura se encuentra \n             Cantavieja?", "1401m", "1290m", "1103m", 2);
+        preguntas[0] = new Pregunta("1/3", getString(R.string.pregunta1), getString(R.string.result1), getString(R.string.result2),getString(R.string.result3), 1);
+        preguntas[1] = new Pregunta("2/3", getString(R.string.pregunta2), "942", "689", "728", 3);
+        preguntas[2] = new Pregunta("3/3", getString(R.string.pregunta3), "1401m", "1290m", "1103m", 2);
 
         //Se asocian los elementos del diseño
         pregunta = (TextView) findViewById(R.id.txtPregunta);
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         }else if (rbtn3.isChecked()){
             resulSelec=3;
         }else{
-            Toast.makeText(this,"No has seleccionado ninguna opción", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,getString(R.string.toast1), Toast.LENGTH_SHORT).show();
         }
 
         //Guadarmos si la respuesta dada es correcta
@@ -73,21 +73,15 @@ public class MainActivity extends AppCompatActivity {
             // Llamamos al metodo para cambiar de pantalla
             segundaPantalla();
 
-
-
             // Cambiamos la pregunta
             cambiarPregunta();
-
-
-
-
 
             // Refrescamos lo botones para que no esten checkeados
             refrescarRadioButtons();
 
         }else{
 
-            Toast.makeText(this,"Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,getString(R.string.toast2), Toast.LENGTH_SHORT).show();
 
         }
 
@@ -100,15 +94,15 @@ public class MainActivity extends AppCompatActivity {
         if (preguntaActual<3){
             Intent intent = new Intent(this,SeguirPregunta.class);
             intent.putExtra("Resultado", "RIGTH !!");
-            intent.putExtra("Boton","Siguiente pregunta");
+            intent.putExtra("Boton",getString(R.string.btnSiguiente1));
             intent.putExtra("Bool", false);
             startActivity(intent);
         }
         // // Pasamos lo que nos hace falta en la segunda pantalla, para volver a empezar el programa
         else{
             Intent intent = new Intent(this,SeguirPregunta.class);
-            intent.putExtra("Resultado", "Partida acabada");
-            intent.putExtra("Boton","Volver a empezar");
+            intent.putExtra("Resultado", getString(R.string.end));
+            intent.putExtra("Boton",getString(R.string.btnSiguiente2));
             intent.putExtra("Bool", true);
             intent.putExtra("cont",preguntaActual);
 

@@ -1,19 +1,11 @@
 package com.carlos.a6_dashboard;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.RelativeLayout;
 
-import com.carlos.a6_dashboard.Activity.Amigos_Activity;
-import com.carlos.a6_dashboard.Activity.Calculadora_Activity;
-import com.carlos.a6_dashboard.Activity.EdadCanina_Activity;
-import com.carlos.a6_dashboard.Activity.Galeria_Activity;
-import com.carlos.a6_dashboard.Activity.Herramientas_Activity;
-import com.carlos.a6_dashboard.Activity.Mapas_Activity;
-import com.carlos.a6_dashboard.Activity.Quizzes_Activity;
-import com.carlos.a6_dashboard.Activity.Restaurantes_Activity;
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 

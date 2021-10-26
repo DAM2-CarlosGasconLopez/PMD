@@ -35,7 +35,7 @@ public class SeguirPregunta extends AppCompatActivity {
 
         btnPasar.setOnClickListener(view -> {
 
-           if (!btnPasar.getText().equals("Volver a empezar")) {
+           if (!btnPasar.getText().equals(getString(R.string.btnSiguiente2))) {
                super.onBackPressed();
            }else{
             Intent intent = new Intent(this,MainActivity.class);

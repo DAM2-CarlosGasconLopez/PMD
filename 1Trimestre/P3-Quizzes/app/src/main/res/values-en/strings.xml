@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Practica6_Quizzes</string>
+    <string name="pregunta1">In which region is Cantavieja?</string>
+    <string name="pregunta2">How many population does Cantavieja have?</string>
+    <string name="pregunta3">How high is Cantavieja?</string>
+    <string name="result1">Maestrazgo</string>
+    <string name="result2">Gudar Javalambre</string>
+    <string name="result3">Albarracín</string>
+    <string name="toast1">You have not selected any option</string>
+    <string name="toast2">Wrong answer</string>
+    <string name="btnSiguiente1">Next question</string>
+    <string name="end">Game Over</string>
+    <string name="btnSiguiente2">Start over</string>
 </resources>

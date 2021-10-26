@@ -1,3 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">6-DashBoard</string>
+
+    <!-- CALCULADORA -->
+    <string name="bienvenido">Welcome to my APP</string>
+    <string name="bienvenidodd">Calculator</string>
+    <string name="numuno">Introduce the first number:</string>
+    <string name="numdos">Introduce the second number:</string>
+    <string name="hinuno">Number 1</string>
+    <string name="hindos">Number 2</string>
+    <string name="ress">The resoult of the operation is:</string>
+    <string name="btnSum">EQUAL</string>
+    <string name="btnRes">SUBST</string>
+    <string name="btnMult">MULT</string>
+    <string name="btnDiv">DIVIDE</string>
+
+
+    <string name="pregunta1">In which region is Cantavieja?</string>
+    <string name="pregunta2">How many population does Cantavieja have?</string>
+    <string name="pregunta3">How high is Cantavieja?</string>
+    <string name="result1">Maestrazgo</string>
+    <string name="result2">Gudar Javalambre</string>
+    <string name="result3">Albarracín</string>
+    <string name="toast1">You have not selected any option</string>
+    <string name="toast2">Wrong answer</string>
+    <string name="btnSiguiente1">Next question</string>
+    <string name="end">Game Over</string>
+    <string name="btnSiguiente2">Start over</string>
 </resources>
