@@ -38,7 +38,7 @@ public class SeguirPregunta extends AppCompatActivity {
             if (!btnPasar.getText().equals(getString(R.string.btnSiguiente2))) {
                 super.onBackPressed();
             }else{
-                Intent intent = new Intent(this,MainActivity.class);
+                Intent intent = new Intent(this,Quizzes_Activity.class);
                 startActivity(intent);
             }
 

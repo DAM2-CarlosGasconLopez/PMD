@@ -1,10 +1,10 @@
-package com.carlos.a7_splasapp;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.carlos.a6_dashboard;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SplasActivity2 extends AppCompatActivity {
 

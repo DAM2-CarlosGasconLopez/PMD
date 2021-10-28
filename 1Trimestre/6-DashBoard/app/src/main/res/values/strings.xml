@@ -27,4 +27,14 @@
     <string name="btnSiguiente1">Siguiente pregunta</string>
     <string name="end">Partida Acabada</string>
     <string name="btnSiguiente2">Volver a empezar</string>
+
+    <!-- EDAD CANINA -->
+
+    <string name="pregunta_ppal">¿Cuántos años tienes?</string>
+    <string name="introdu_edad">Introduce tu edad</string>
+    <string name="btn">Calcular</string>
+
+
+    <string name="texto_resultado">Si fueras perro, tu edad seria %d años</string>
+    <string name="msg_toast">No has introducido el valor</string>
 </resources>
