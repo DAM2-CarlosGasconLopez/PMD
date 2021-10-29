@@ -5,10 +5,15 @@
     android:layout_height="match_parent"
     tools:context=".fragments.DetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ImageView
+        android:id="@+id/pokemon_detail_imageView"
+        android:src="@drawable/charmeleon"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+    </ImageView>
 
 </FrameLayout>

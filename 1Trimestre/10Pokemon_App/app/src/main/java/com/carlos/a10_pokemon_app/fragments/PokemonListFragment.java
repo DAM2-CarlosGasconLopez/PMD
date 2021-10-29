@@ -7,8 +7,16 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
+import com.carlos.a10_pokemon_app.MainActivity;
 import com.carlos.a10_pokemon_app.R;
+import com.carlos.a10_pokemon_app.adapter.PokemonListAdapter;
+import com.carlos.a10_pokemon_app.model.Pokemon;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +29,10 @@ public class PokemonListFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    private ListView lvPokemons;
+    private PokemonListAdapter adaptador;
+    private ArrayList<Pokemon> pokemonArrayList = new ArrayList<>();
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -60,7 +72,42 @@ public class PokemonListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        // 1 - Creamos una lista a retornar
+        View view = inflater.inflate(R.layout.fragment_pokemon_list, container, false);
+        // 2 - A partir de este view vamos a obtener todos los views del fragment
+        lvPokemons = view.findViewById(R.id.pokemon_listView);
+        // 3 - Traemos el resto de codigo del MainActivity
+        pokemonArrayList.add(new Pokemon("1","Bulbasaur",Pokemon.Type.PLANT));
+        pokemonArrayList.add(new Pokemon("2","IvySaur",Pokemon.Type.PLANT));
+        pokemonArrayList.add(new Pokemon("3","VenuaSaur",Pokemon.Type.PLANT));
+        pokemonArrayList.add(new Pokemon("4","Charmander",Pokemon.Type.FIRE));
+        pokemonArrayList.add(new Pokemon("5","Charmeleon",Pokemon.Type.WATER));
+        pokemonArrayList.add(new Pokemon("6","Charizard",Pokemon.Type.FIRE));
+        pokemonArrayList.add(new Pokemon("7","Squirtle",Pokemon.Type.WATER));
+        pokemonArrayList.add(new Pokemon("8","Blastoise",Pokemon.Type.ELECTRIC));
+        pokemonArrayList.add(new Pokemon("25","Pikachu",Pokemon.Type.ELECTRIC));
+        pokemonArrayList.add(new Pokemon("26","Raichu",Pokemon.Type.ELECTRIC));
+        //          4 - Un contexto SIEMPRE va a depender de un Activity.
+        // Cuando nos pida un contexto desde un Fragment, podemos obtenerlo con getActivity()
+        adaptador = new PokemonListAdapter(getActivity(),pokemonArrayList,R.id.item);
+        // 5 - Asignamos el adaptador
+        lvPokemons.setAdapter(adaptador);
+
+        // 6 - SetOnClick()
+        lvPokemons.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Pokemon selectedPokemon = (Pokemon) adaptador.getItem(position);
+                if (selectedPokemon != null){
+                    Toast.makeText(getActivity(), selectedPokemon.getNombre(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pokemon_list, container, false);
+        return view;
     }
 }
