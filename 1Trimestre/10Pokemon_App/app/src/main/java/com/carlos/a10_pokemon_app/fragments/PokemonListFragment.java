@@ -1,7 +1,9 @@
 package com.carlos.a10_pokemon_app.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 import com.carlos.a10_pokemon_app.MainActivity;
 import com.carlos.a10_pokemon_app.R;
 import com.carlos.a10_pokemon_app.adapter.PokemonListAdapter;
+import com.carlos.a10_pokemon_app.interfaces.iComunicaFragments;
 import com.carlos.a10_pokemon_app.model.Pokemon;
 
 import java.util.ArrayList;
@@ -34,12 +37,21 @@ public class PokemonListFragment extends Fragment {
     private PokemonListAdapter adaptador;
     private ArrayList<Pokemon> pokemonArrayList = new ArrayList<>();
 
+    //Declaro la interfaz que vamos a utilizar
+    iComunicaFragments interfaz;
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     public PokemonListFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        interfaz = (iComunicaFragments) context;
     }
 
     /**
@@ -77,16 +89,16 @@ public class PokemonListFragment extends Fragment {
         // 2 - A partir de este view vamos a obtener todos los views del fragment
         lvPokemons = view.findViewById(R.id.pokemon_listView);
         // 3 - Traemos el resto de codigo del MainActivity
-        pokemonArrayList.add(new Pokemon("1","Bulbasaur",Pokemon.Type.PLANT));
-        pokemonArrayList.add(new Pokemon("2","IvySaur",Pokemon.Type.PLANT));
-        pokemonArrayList.add(new Pokemon("3","VenuaSaur",Pokemon.Type.PLANT));
-        pokemonArrayList.add(new Pokemon("4","Charmander",Pokemon.Type.FIRE));
-        pokemonArrayList.add(new Pokemon("5","Charmeleon",Pokemon.Type.WATER));
-        pokemonArrayList.add(new Pokemon("6","Charizard",Pokemon.Type.FIRE));
-        pokemonArrayList.add(new Pokemon("7","Squirtle",Pokemon.Type.WATER));
-        pokemonArrayList.add(new Pokemon("8","Blastoise",Pokemon.Type.ELECTRIC));
-        pokemonArrayList.add(new Pokemon("25","Pikachu",Pokemon.Type.ELECTRIC));
-        pokemonArrayList.add(new Pokemon("26","Raichu",Pokemon.Type.ELECTRIC));
+        pokemonArrayList.add(new Pokemon("1","Bulbasaur",R.drawable.bulbasaur,Pokemon.Type.PLANT));
+        pokemonArrayList.add(new Pokemon("2","IvySaur",R.drawable.ivysaur,Pokemon.Type.PLANT));
+        pokemonArrayList.add(new Pokemon("3","VenuaSaur",R.drawable.venusaur,Pokemon.Type.PLANT));
+        pokemonArrayList.add(new Pokemon("4","Charmander",R.drawable.charmander,Pokemon.Type.FIRE));
+        pokemonArrayList.add(new Pokemon("5","Charmeleon",R.drawable.charmeleon,Pokemon.Type.WATER));
+        pokemonArrayList.add(new Pokemon("6","Charizard",R.drawable.charizard,Pokemon.Type.FIRE));
+        pokemonArrayList.add(new Pokemon("7","Squirtle",R.drawable.squirtle,Pokemon.Type.WATER));
+        pokemonArrayList.add(new Pokemon("8","Blastoise",R.drawable.blastoise,Pokemon.Type.ELECTRIC));
+        pokemonArrayList.add(new Pokemon("25","Pikachu",R.drawable.pikachu,Pokemon.Type.ELECTRIC));
+        pokemonArrayList.add(new Pokemon("26","Raichu",R.drawable.raichu,Pokemon.Type.ELECTRIC));
         //          4 - Un contexto SIEMPRE va a depender de un Activity.
         // Cuando nos pida un contexto desde un Fragment, podemos obtenerlo con getActivity()
         adaptador = new PokemonListAdapter(getActivity(),pokemonArrayList,R.id.item);
@@ -99,7 +111,7 @@ public class PokemonListFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Pokemon selectedPokemon = (Pokemon) adaptador.getItem(position);
                 if (selectedPokemon != null){
-                    Toast.makeText(getActivity(), selectedPokemon.getNombre(), Toast.LENGTH_SHORT).show();
+                    interfaz.enviarPokemon(selectedPokemon);
                 }
             }
         });
