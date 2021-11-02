@@ -1,16 +1,20 @@
 package com.carlos.a10_pokemon_app.fragments;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.carlos.a10_pokemon_app.R;
+import com.squareup.picasso.Picasso;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -52,9 +56,18 @@ public class DetailFragment extends Fragment {
         return fragment;
     }
 
-    public void setPokemonImage(int pokemonImageId){
+    public void setPokemonImage(String pokemonURL){
         // Establecemos la imagen que queremos poner en el detalle Fragment
-        detailImageView.setImageDrawable(ContextCompat.getDrawable(getActivity(),pokemonImageId));
+        //detailImageView.setImageDrawable(ContextCompat.getDrawable(getActivity(),pokemonImageId));
+        Log.i("POKEMON", "LA URL DEL POKEMON ES: " + pokemonURL);
+        Picasso.get().load(pokemonURL).into(detailImageView);
+
+    }
+
+    public void playPokemonSound(int pokemonSoundId){
+        // Establecemon el sonido que queremos poner en el detalle fragment
+        MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(),pokemonSoundId);
+        mediaPlayer.start();
     }
 
 

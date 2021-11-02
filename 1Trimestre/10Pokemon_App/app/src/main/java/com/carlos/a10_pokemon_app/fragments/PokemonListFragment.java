@@ -89,17 +89,17 @@ public class PokemonListFragment extends Fragment {
         // 2 - A partir de este view vamos a obtener todos los views del fragment
         lvPokemons = view.findViewById(R.id.pokemon_listView);
         // 3 - Traemos el resto de codigo del MainActivity
-        pokemonArrayList.add(new Pokemon("1","Bulbasaur",R.drawable.bulbasaur,Pokemon.Type.PLANT));
-        pokemonArrayList.add(new Pokemon("2","IvySaur",R.drawable.ivysaur,Pokemon.Type.PLANT));
-        pokemonArrayList.add(new Pokemon("3","VenuaSaur",R.drawable.venusaur,Pokemon.Type.PLANT));
-        pokemonArrayList.add(new Pokemon("4","Charmander",R.drawable.charmander,Pokemon.Type.FIRE));
-        pokemonArrayList.add(new Pokemon("5","Charmeleon",R.drawable.charmeleon,Pokemon.Type.WATER));
-        pokemonArrayList.add(new Pokemon("6","Charizard",R.drawable.charizard,Pokemon.Type.FIRE));
-        pokemonArrayList.add(new Pokemon("7","Squirtle",R.drawable.squirtle,Pokemon.Type.WATER));
-        pokemonArrayList.add(new Pokemon("8","Blastoise",R.drawable.blastoise,Pokemon.Type.ELECTRIC));
-        pokemonArrayList.add(new Pokemon("25","Pikachu",R.drawable.pikachu,Pokemon.Type.ELECTRIC));
-        pokemonArrayList.add(new Pokemon("26","Raichu",R.drawable.raichu,Pokemon.Type.ELECTRIC));
-        //          4 - Un contexto SIEMPRE va a depender de un Activity.
+        pokemonArrayList.add(new Pokemon("1","Bulbasaur","https://cdn.alfabetajuega.com/wp-content/uploads/2020/03/bulbasaur-pok%C3%A9mon.png",R.raw.bulbasaur,Pokemon.Type.PLANT));
+        pokemonArrayList.add(new Pokemon("2","IvySaur","https://images.wikidexcdn.net/mwuploads/wikidex/6/60/latest/20151001164033/EP893_Ivysaur_de_Xana.png",R.raw.ivysaur,Pokemon.Type.PLANT));
+        pokemonArrayList.add(new Pokemon("3","VenuaSaur","https://s3.eu-west-3.amazonaws.com/dexertoes-assets-production-7d0f29e6/uploads/2020/09/24185719/venusaur-pokemon-go.png",R.raw.venuasaur,Pokemon.Type.PLANT));
+        pokemonArrayList.add(new Pokemon("4","Charmander","https://areajugones.sport.es/wp-content/uploads/2019/11/Pokemon-Espada-y-Escudo-Charmander.jpg",R.raw.charmander,Pokemon.Type.FIRE));
+        pokemonArrayList.add(new Pokemon("5","Charmeleon","https://i.pinimg.com/originals/80/42/50/8042507726c9558b011c25c0ca4ecac8.png",R.raw.charmeleon,Pokemon.Type.WATER));
+        pokemonArrayList.add(new Pokemon("6","Charizard","https://i.blogs.es/fb1922/1200px-ep803_charizard_de_ash/840_560.jpeg",R.raw.charizard,Pokemon.Type.FIRE));
+        pokemonArrayList.add(new Pokemon("7","Squirtle","https://areajugones.sport.es/wp-content/uploads/2021/05/squirtle-pokemon.jpg",R.raw.squirtle,Pokemon.Type.WATER));
+        pokemonArrayList.add(new Pokemon("8","Blastoise","https://images.wikidexcdn.net/mwuploads/wikidex/8/81/latest/20210528173042/EP1157_Blastoise_de_Gary.png",R.raw.blastoise,Pokemon.Type.ELECTRIC));
+        pokemonArrayList.add(new Pokemon("25","Pikachu","https://areajugones.sport.es/wp-content/uploads/2021/02/pikachu-pokemon.jpg",R.raw.pikachu,Pokemon.Type.ELECTRIC));
+        pokemonArrayList.add(new Pokemon("26","Raichu","https://www.egames.news/__export/1627425509127/sites/debate/img/2021/07/27/copia_de_egames_-_2021-07-27t163726_028.jpg_759710130.jpg",R.raw.raichu,Pokemon.Type.ELECTRIC));
+        //  4 - Un contexto SIEMPRE va a depender de un Activity.
         // Cuando nos pida un contexto desde un Fragment, podemos obtenerlo con getActivity()
         adaptador = new PokemonListAdapter(getActivity(),pokemonArrayList,R.id.item);
         // 5 - Asignamos el adaptador
@@ -115,10 +115,6 @@ public class PokemonListFragment extends Fragment {
                 }
             }
         });
-
-
-
-
         // Inflate the layout for this fragment
         return view;
     }
