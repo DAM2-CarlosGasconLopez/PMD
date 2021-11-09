@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    RelativeLayout rellay_Calculadora, rellay_Amigos, rellay_Perrete, rellay_quizzes, rellay_galeria, rellay_mapas, rellay_restaurante, rellay_settings;
+    RelativeLayout rellay_Calculadora, rellay_Amigos, rellay_Perrete, rellay_quizzes, rellay_galeria, rellay_mapas, rellay_restaurante, rellay_settings,rellay_musica;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         rellay_mapas = findViewById(R.id.rellay_maps);
         rellay_restaurante = findViewById(R.id.rellay_ritorante);
         rellay_settings = findViewById(R.id.rellay_settings);
+        rellay_musica = findViewById(R.id.rellay_musica);
 
         // Calculadora
         rellay_Calculadora.setOnClickListener(view -> {
@@ -70,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         // Settings
         rellay_settings.setOnClickListener(view -> {
             Intent intent = new Intent(this, Herramientas_Activity.class);
+            startActivity(intent);
+        });
+
+        //Musica
+        rellay_musica.setOnClickListener(view -> {
+            Intent intent = new Intent(this, Musica_Activity.class);
             startActivity(intent);
         });
 
