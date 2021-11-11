@@ -1,4 +1,4 @@
-package com.carlos.a6_dashboard;
+package com.carlos.a6_dashboard.Musica.adaptadores;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.carlos.a6_dashboard.Musica.Detalle_Activity;
+import com.carlos.a6_dashboard.Musica.model.Entidad;
+import com.carlos.a6_dashboard.R;
 
 import java.util.ArrayList;
 

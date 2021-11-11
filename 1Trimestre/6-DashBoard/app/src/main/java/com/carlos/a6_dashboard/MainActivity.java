@@ -6,10 +6,20 @@ import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.carlos.a6_dashboard.Amigos.Amigos_Activity;
+import com.carlos.a6_dashboard.Calculadora.Calculadora_Activity;
+import com.carlos.a6_dashboard.EdadCanina.EdadCanina_Activity;
+import com.carlos.a6_dashboard.Galeria.Galeria_Activity;
+import com.carlos.a6_dashboard.Mapas.Mapas_Activity;
+import com.carlos.a6_dashboard.MotoGp.MotoGP_Activity;
+import com.carlos.a6_dashboard.Musica.Musica_Activity;
+import com.carlos.a6_dashboard.Quizzes.Quizzes_Activity;
+import com.carlos.a6_dashboard.Settings.Herramientas_Activity;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    RelativeLayout rellay_Calculadora, rellay_Amigos, rellay_Perrete, rellay_quizzes, rellay_galeria, rellay_mapas, rellay_restaurante, rellay_settings,rellay_musica;
+    RelativeLayout rellay_Calculadora, rellay_Amigos, rellay_Perrete, rellay_quizzes, rellay_galeria, rellay_mapas, rellay_motoGp, rellay_settings,rellay_musica;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         rellay_quizzes = findViewById(R.id.rellay_quizzes);
         rellay_galeria = findViewById(R.id.rellay_galery);
         rellay_mapas = findViewById(R.id.rellay_maps);
-        rellay_restaurante = findViewById(R.id.rellay_ritorante);
+        rellay_motoGp = findViewById(R.id.rellay_motogp);
         rellay_settings = findViewById(R.id.rellay_settings);
         rellay_musica = findViewById(R.id.rellay_musica);
 
@@ -63,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Restaurante
-        rellay_restaurante.setOnClickListener(view -> {
-            Intent intent = new Intent(this, Restaurantes_Activity.class);
+        rellay_motoGp.setOnClickListener(view -> {
+            Intent intent = new Intent(this, MotoGP_Activity.class);
             startActivity(intent);
         });
 

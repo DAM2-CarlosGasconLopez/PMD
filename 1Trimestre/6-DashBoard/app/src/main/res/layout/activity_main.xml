@@ -275,11 +275,11 @@
                 android:layout_weight="1">
 
                 <RelativeLayout
-                    android:id="@+id/rellay_ritorante"
+                    android:id="@+id/rellay_motogp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.55"
-                    android:background="@color/darkviolet"
+                    android:background="@color/orange"
                     android:clickable="true"
                     android:foreground="?attr/selectableItemBackground">
 
@@ -296,8 +296,8 @@
                             android:adjustViewBounds="true"
                             android:padding="8dp"
                             android:scaleType="centerInside"
-                            app:tint="@color/white"
-                            android:src="@drawable/restaurantes" />
+                            android:src="@drawable/casco"
+                            app:tint="@color/white" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -305,7 +305,7 @@
                             android:layout_below="@+id/imgView7"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
-                            android:text="Restaurantes"
+                            android:text="Moto GP 2021"
                             android:textSize="14sp" />
 
 
@@ -379,7 +379,7 @@
                             android:adjustViewBounds="true"
                             android:padding="8dp"
                             android:scaleType="centerInside"
-                            android:src="@drawable/restaurantes"
+                            android:src="@drawable/musica"
                             app:tint="@color/white" />
 
                         <TextView
@@ -400,7 +400,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.55"
-                    android:background="?android:attr/colorActivatedHighlight"
+                    android:background="@color/darkviolet_dark"
                     android:clickable="true"
                     android:foreground="?attr/selectableItemBackground">
 
@@ -417,7 +417,6 @@
                             android:adjustViewBounds="true"
                             android:padding="8dp"
                             android:scaleType="centerInside"
-                            android:src="@drawable/ic_herramientas"
                             app:tint="@color/white" />
 
                         <TextView

@@ -1,9 +1,13 @@
-package com.carlos.a6_dashboard;
+package com.carlos.a6_dashboard.Musica;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ListView;
+
+import com.carlos.a6_dashboard.R;
+import com.carlos.a6_dashboard.Musica.adaptadores.Adaptador;
+import com.carlos.a6_dashboard.Musica.model.Entidad;
 
 import java.util.ArrayList;
 

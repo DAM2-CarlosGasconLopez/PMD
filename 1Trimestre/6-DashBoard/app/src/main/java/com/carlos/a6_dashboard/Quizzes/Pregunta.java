@@ -1,4 +1,4 @@
-package com.carlos.a6_dashboard;
+package com.carlos.a6_dashboard.Quizzes;
 
 public class Pregunta {
     private String numero;

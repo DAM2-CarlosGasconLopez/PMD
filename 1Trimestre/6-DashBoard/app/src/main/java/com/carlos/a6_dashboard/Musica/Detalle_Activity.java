@@ -1,10 +1,13 @@
-package com.carlos.a6_dashboard;
+package com.carlos.a6_dashboard.Musica;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.carlos.a6_dashboard.Musica.model.Entidad;
+import com.carlos.a6_dashboard.R;
 
 public class Detalle_Activity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.carlos.a6_dashboard;
+package com.carlos.a6_dashboard.Musica.model;
 
 import java.io.Serializable;
 

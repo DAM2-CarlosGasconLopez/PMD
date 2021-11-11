@@ -15,6 +15,15 @@
     </style>
 
     // Calculadora
+    <style name="MotoGpTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryDark">@color/orange_dark</item>
+        <item name="colorAccent">@color/orange</item>
+
+    </style>
+
+    // Calculadora
     <style name="CalculadoraTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
 
         <item name="colorPrimary">@color/red</item>

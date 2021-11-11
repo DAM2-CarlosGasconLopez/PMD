@@ -1,4 +1,4 @@
-package com.carlos.a6_dashboard;
+package com.carlos.a6_dashboard.Quizzes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -92,7 +92,7 @@ public class Quizzes_Activity extends AppCompatActivity {
         // Pasamos lo que nos hace falta en la segunda pantalla, para pasar de pregunta
         // Si la pregunta no es la ultima ...
         if (preguntaActual<3){
-            Intent intent = new Intent(this,SeguirPregunta.class);
+            Intent intent = new Intent(this, SeguirPregunta.class);
             intent.putExtra("Resultado", "RIGTH !!");
             intent.putExtra("Boton",getString(R.string.btnSiguiente1));
             intent.putExtra("Bool", false);

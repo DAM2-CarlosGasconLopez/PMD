@@ -1,4 +1,4 @@
-package com.carlos.a6_dashboard;
+package com.carlos.a6_dashboard.Quizzes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.carlos.a6_dashboard.Quizzes.Quizzes_Activity;
+import com.carlos.a6_dashboard.R;
 
 public class SeguirPregunta extends AppCompatActivity {
     TextView txtPasar;
@@ -38,7 +41,7 @@ public class SeguirPregunta extends AppCompatActivity {
             if (!btnPasar.getText().equals(getString(R.string.btnSiguiente2))) {
                 super.onBackPressed();
             }else{
-                Intent intent = new Intent(this,Quizzes_Activity.class);
+                Intent intent = new Intent(this, Quizzes_Activity.class);
                 startActivity(intent);
             }
 
