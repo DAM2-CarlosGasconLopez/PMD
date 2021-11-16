@@ -2,26 +2,30 @@ package com.carlos.a16_pokefit;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.carlos.a16_pokefit.placeholder.PlaceholderContent.PlaceholderItem;
+
+import com.bumptech.glide.Glide;
 import com.carlos.a16_pokefit.databinding.FragmentPokemonBinding;
+import com.carlos.a16_pokefit.models.Pokemon;
+import com.carlos.a16_pokefit.models.PokemonRespuesta;
 
 import java.util.List;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link PlaceholderItem}.
- * TODO: Replace the implementation with code for your data type.
- */
+
 public class MypokemonRecyclerViewAdapter extends RecyclerView.Adapter<MypokemonRecyclerViewAdapter.ViewHolder> {
 
-    private final List<PlaceholderItem> mValues;
+    private final List<Pokemon> mValues;
+    private Context context;
 
-    public MypokemonRecyclerViewAdapter(List<PlaceholderItem> items) {
+    public MypokemonRecyclerViewAdapter(List<Pokemon> items, Context context) {
         mValues = items;
+        this.context = context;
     }
 
     @Override
@@ -34,8 +38,12 @@ public class MypokemonRecyclerViewAdapter extends RecyclerView.Adapter<Mypokemon
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        holder.namePokemon.setText(mValues.get(position).getName());
+
+        Glide.with(context)
+                .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + mValues.get(position).getNumber() +".png")
+                .into(holder.imagePokemon);
+
     }
 
     @Override
@@ -44,19 +52,19 @@ public class MypokemonRecyclerViewAdapter extends RecyclerView.Adapter<Mypokemon
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public final TextView mIdView;
-        public final TextView mContentView;
-        public PlaceholderItem mItem;
+        public final ImageView imagePokemon;
+        public final TextView namePokemon;
+        public Pokemon mItem;
 
         public ViewHolder(FragmentPokemonBinding binding) {
             super(binding.getRoot());
-            mIdView = binding.itemNumber;
-            mContentView = binding.content;
+            imagePokemon = binding.fotoImage;
+            namePokemon = binding.nombreTextView;
         }
 
         @Override
         public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
+            return super.toString() + " '" + namePokemon.getText() + "'";
         }
     }
 }

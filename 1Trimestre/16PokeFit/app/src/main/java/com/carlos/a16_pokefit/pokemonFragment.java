@@ -8,31 +8,39 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.carlos.a16_pokefit.placeholder.PlaceholderContent;
+import com.carlos.a16_pokefit.models.Pokemon;
+import com.carlos.a16_pokefit.models.PokemonRespuesta;
 
-/**
- * A fragment representing a list of Items.
- */
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+
 public class pokemonFragment extends Fragment {
 
-    // TODO: Customize parameter argument names
-    private static final String ARG_COLUMN_COUNT = "column-count";
-    // TODO: Customize parameters
-    private int mColumnCount = 3;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
+    private static final String ARG_COLUMN_COUNT = "column-count";
+
+    private int mColumnCount = 3;
+    RecyclerView recyclerView;
+    MypokemonRecyclerViewAdapter adaptador;
+    Retrofit retrofit;
+
+
     public pokemonFragment() {
+
     }
 
-    // TODO: Customize parameter initialization
-    @SuppressWarnings("unused")
+
     public static pokemonFragment newInstance(int columnCount) {
         pokemonFragment fragment = new pokemonFragment();
         Bundle args = new Bundle();
@@ -55,17 +63,62 @@ public class pokemonFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pokemon_list, container, false);
 
-        // Set the adapter
+
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
+            recyclerView = (RecyclerView) view;
             if (mColumnCount <= 1) {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MypokemonRecyclerViewAdapter(PlaceholderContent.ITEMS));
+
+            // INSTANCIA DE RETROFIT
+            retrofit = new Retrofit.Builder()
+                    .baseUrl("https://pokeapi.co/api/v2/")
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+
+            // OBTENER DATOS
+            obtenerDatos(retrofit,context);
+
+
+
         }
         return view;
+    }
+
+    private void obtenerDatos(Retrofit retrofit, Context context) {
+        PokemonService service = retrofit.create(PokemonService.class);
+        Call<PokemonRespuesta> pokemonRespuestaCall = service.obtenerListaPokemon();
+        pokemonRespuestaCall.enqueue(new Callback<PokemonRespuesta>() {
+            @Override
+            public void onResponse(Call<PokemonRespuesta> call, Response<PokemonRespuesta> response) {
+
+                if (response.isSuccessful()){
+                    PokemonRespuesta pokemonRespuesta = response.body();
+
+                    // Pokemon respuesta en una clase que nosotros creamos
+                    // y que tiene un array list en java con el listado de
+                    // los objectos Pokemon
+                    ArrayList<Pokemon> listPokemon = pokemonRespuesta.getResults();
+
+                    adaptador = new MypokemonRecyclerViewAdapter(listPokemon,context);
+                    recyclerView.setAdapter(adaptador);
+
+                }else{
+
+                    // Detectar errores, opcional
+                    Log.e("OJO","ERROR en onResponse: " + response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<PokemonRespuesta> call, Throwable t) {
+
+                // Detectar errores, opcional
+                Log.e("OJO","ERROR en onFailure: " + t.getMessage());
+            }
+        });
     }
 }

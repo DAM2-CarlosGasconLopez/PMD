@@ -8,31 +8,37 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.carlos.a15cartapizzeria.placeholder.PlaceholderContent;
 
-/**
- * A fragment representing a list of Items.
- */
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+
 public class PizzaFragment extends Fragment {
 
-    // TODO: Customize parameter argument names
-    private static final String ARG_COLUMN_COUNT = "column-count";
-    // TODO: Customize parameters
-    private int mColumnCount = 1;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
+    private static final String ARG_COLUMN_COUNT = "column-count";
+    private int mColumnCount = 1;
+    RecyclerView recyclerView;
+    MyPizzaRecyclerViewAdapter adaptadorPizza;
+    List<Pizza> pizzaList;
+    Retrofit retrofit;
+
+    public static final String BASE_URL = "https://private-3cc5a4-codingpizza.apiary-mock.com";
+
     public PizzaFragment() {
     }
 
-    // TODO: Customize parameter initialization
-    @SuppressWarnings("unused")
+
     public static PizzaFragment newInstance(int columnCount) {
         PizzaFragment fragment = new PizzaFragment();
         Bundle args = new Bundle();
@@ -55,17 +61,66 @@ public class PizzaFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pizza_list, container, false);
 
-        // Set the adapter
+
+
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
+            recyclerView = (RecyclerView) view;
             if (mColumnCount <= 1) {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyPizzaRecyclerViewAdapter(PlaceholderContent.ITEMS));
+            // 1 - Uso RETROFIT para obtener la lista de Pizzas
+
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            // 2 - Llamo a obtenerListaPizzas para obtener la lista Pizzas
+            obtenerListaPizzas(retrofit,context);
+
+
+
+
+
+            // adaptadorPizza = new MyPizzaRecyclerViewAdapter(PlaceholderContent.ITEMS);
+            // recyclerView.setAdapter(adaptadorPizza);
         }
         return view;
     }
+
+    private void obtenerListaPizzas(Retrofit retrofit,Context context) {
+
+        PizzaService pizzaService = retrofit.create(PizzaService.class);
+        Call<List<Pizza>> pizzaList = pizzaService.obtenerPizzas();
+
+        pizzaList.enqueue(new Callback<List<Pizza>>() {
+            @Override
+            public void onResponse(Call<List<Pizza>> call, Response<List<Pizza>> response) {
+                if(response.isSuccessful()){
+                    adaptadorPizza = new MyPizzaRecyclerViewAdapter(response.body(),context);
+                    recyclerView.setAdapter(adaptadorPizza);
+                }else{
+                    Log.e("PIZZA","onResponse: Llamada fallida en onResponse");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Pizza>> call, Throwable t) {
+                Log.e("PIZZA","onFailure: Llamada fallida en onFailure" +
+                        "");
+            }
+        });
+
+    }
 }
+
+
+
+
+
+
+
+
+
