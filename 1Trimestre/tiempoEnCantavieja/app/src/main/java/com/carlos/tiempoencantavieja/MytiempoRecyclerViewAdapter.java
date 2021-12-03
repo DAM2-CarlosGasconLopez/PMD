@@ -1,7 +1,10 @@
 package com.carlos.tiempoencantavieja;
 
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,18 +13,18 @@ import android.widget.TextView;
 import com.carlos.tiempoencantavieja.placeholder.PlaceholderContent.PlaceholderItem;
 import com.carlos.tiempoencantavieja.databinding.FragmentTiempoBinding;
 
+import java.time.DateTimeException;
 import java.util.List;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link PlaceholderItem}.
- * TODO: Replace the implementation with code for your data type.
- */
+
 public class MytiempoRecyclerViewAdapter extends RecyclerView.Adapter<MytiempoRecyclerViewAdapter.ViewHolder> {
 
-    private final List<PlaceholderItem> mValues;
+    private final List<Tiempo> mValues;
+    private Context context;
 
-    public MytiempoRecyclerViewAdapter(List<PlaceholderItem> items) {
+    public MytiempoRecyclerViewAdapter(List<Tiempo> items, Context context) {
         mValues = items;
+        this.context = context;
     }
 
     @Override
@@ -31,11 +34,14 @@ public class MytiempoRecyclerViewAdapter extends RecyclerView.Adapter<MytiempoRe
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        holder.txtNameFecha.setText((CharSequence) holder.mItem.getFecha());
+        //holder.txtNamePrecipitacion.setText(holder.mItem.getGrados());
+       // holder.txtNameViento.setText(holder.mItem.getViento());
+       // holder.txtNameGrados.setText(holder.mItem.getGrados());
     }
 
     @Override
@@ -44,19 +50,23 @@ public class MytiempoRecyclerViewAdapter extends RecyclerView.Adapter<MytiempoRe
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public final TextView mIdView;
-        public final TextView mContentView;
-        public PlaceholderItem mItem;
+        public final TextView txtNameFecha;
+        public final TextView txtNamePrecipitacion;
+        public final TextView txtNameViento;
+        public final TextView txtNameGrados;
+        public Tiempo mItem;
 
         public ViewHolder(FragmentTiempoBinding binding) {
             super(binding.getRoot());
-            mIdView = binding.itemNumber;
-            mContentView = binding.content;
+            txtNameFecha = binding.txtfecha;
+            txtNamePrecipitacion = binding.txtPrecipitacion;
+            txtNameViento = binding.txtviento;
+            txtNameGrados = binding.txtgrados;
         }
 
         @Override
         public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
+            return super.toString() + " '" + txtNameFecha.getText() + "'";
         }
     }
 }
