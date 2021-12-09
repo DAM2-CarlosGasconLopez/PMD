@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "231445279827",
+    "project_id": "cantavieja-c9635",
+    "storage_bucket": "cantavieja-c9635.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231445279827:android:efe853d5d64ee192de82a6",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_1_evaluacion_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "231445279827-le7vdne6enfd50bbomgcrum659v21jaf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proyecto_1_evaluacion_android",
+            "certificate_hash": "91093f92010c79d646d26243823ac8310e6cf419"
+          }
+        },
+        {
+          "client_id": "231445279827-r22mjgi7dog4kkhiu0t4co4peenqdn28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZL7dcPgdXqPWQaDDuzONvp0waVMldxKU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "231445279827-r22mjgi7dog4kkhiu0t4co4peenqdn28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
