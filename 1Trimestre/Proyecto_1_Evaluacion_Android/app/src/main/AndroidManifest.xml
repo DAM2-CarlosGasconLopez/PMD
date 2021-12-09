@@ -19,9 +19,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto_1º_Evaluacion_Android">
         <activity
-            android:name=".FotosActivity"
-            android:exported="false" />
-        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity

@@ -1,66 +1,90 @@
 package com.example.proyecto_1_evaluacion_android.TabLayout;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.example.proyecto_1_evaluacion_android.MainActivity;
+import com.example.proyecto_1_evaluacion_android.MapsActivityCantavieja;
 import com.example.proyecto_1_evaluacion_android.R;
+import com.example.proyecto_1_evaluacion_android.Restaurante.Restaurantes;
+import com.example.proyecto_1_evaluacion_android.Turismo.TurismoActivity;
+import com.google.firebase.auth.FirebaseAuth;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MainFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class MainFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public MainFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MainFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MainFragment newInstance(String param1, String param2) {
-        MainFragment fragment = new MainFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    CardView restauranteClick, localizacionClick, turismoClick, bandosClick;
+    Button btnCerrarSesion;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+
+        super.onCreate(savedInstanceState);
+
+        //getActivity().getActionBar().hide();
+
+        restauranteClick = view.findViewById(R.id.restaurante);
+        localizacionClick = view.findViewById(R.id.localizacion);
+        turismoClick = view.findViewById(R.id.turismo);
+        bandosClick = view.findViewById(R.id.bandos);
+        btnCerrarSesion = view.findViewById(R.id.btnBlock);
+
+        //Recuperamos los datos del LoginActivity
+        Bundle datos = getActivity().getIntent().getExtras();
+        String email = datos.getString("email");
+        String metodo = datos.getString("metodo");
+        // Guardado de datos
+        SharedPreferences sesion = getActivity().getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        SharedPreferences.Editor Obj_editor = sesion.edit();
+        Obj_editor.putString("email", email);
+        Obj_editor.putString("metodo", metodo);
+        Obj_editor.apply();
+        Obj_editor.commit();
+
+
+        restauranteClick.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), Restaurantes.class);
+            startActivity(intent);
+        });
+
+        localizacionClick.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), MapsActivityCantavieja.class);
+            startActivity(intent);
+        });
+
+        turismoClick.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), TurismoActivity.class);
+            startActivity(intent);
+        });
+
+        bandosClick.setOnClickListener(v -> {
+            Uri uri = Uri.parse("https://www.cantavieja.es/p-1-bandos");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        });
+
+
+
+
+        return view;
     }
 }

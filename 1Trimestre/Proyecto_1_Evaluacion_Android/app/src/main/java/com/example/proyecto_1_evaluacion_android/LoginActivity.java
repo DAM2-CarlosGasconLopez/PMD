@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onStart();
         FirebaseUser currentUser = firebaseAuth.getCurrentUser();
         authLayout.setVisibility(View.VISIBLE);
-
+        getSupportActionBar().hide();
     }
 
     @Override
