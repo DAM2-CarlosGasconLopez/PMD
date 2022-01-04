@@ -14,20 +14,21 @@
 
         <Button
             android:id="@+id/btnBlock"
-            android:layout_width="367dp"
-            android:layout_height="123dp"
+            android:layout_width="351dp"
+            android:layout_height="103dp"
             android:backgroundTint="@color/white"
             android:isScrollContainer="false"
-            android:text="Cerrar Sesion"
+            android:text="@string/cerrar_sesion"
             android:textColor="@color/grey"
             app:icon="@android:drawable/ic_lock_idle_lock"
             app:iconGravity="textEnd"
             app:iconTint="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.285"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.686">
+            app:layout_constraintVertical_bias="0.69">
 
         </Button>
 
@@ -50,6 +51,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.717" />
+
+        <TextView
+            android:id="@+id/txtEmail2"
+            android:layout_width="269dp"
+            android:layout_height="45dp"
+            android:text="@string/mi_cuenta"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnBlock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.372" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

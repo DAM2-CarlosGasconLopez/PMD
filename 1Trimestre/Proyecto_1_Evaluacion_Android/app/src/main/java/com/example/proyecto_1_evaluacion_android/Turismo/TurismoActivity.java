@@ -27,7 +27,7 @@ public class TurismoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turismo);
-        setTitle("Turismo por Cantavieja");
+        setTitle(getString(R.string.turismodecantavieja));
 
         lstItems = findViewById(R.id.lstViewItems);
 
@@ -44,17 +44,17 @@ public class TurismoActivity extends AppCompatActivity {
     }
 
     private void LlenarItems() {
-        arrayEntidad.add(new Entidad(R.drawable.ujno, "Plaza de Cristo Rey", "Interes Arquitectonico", "La plaza es un espacio rectangular cerrado y asoportalado en tres de sus lados por la citada iglesia, la Casa Consistorial y la Casa Bayle. Los arcos que se abren a la plaza son apuntados y de medio punto. En algunos tramos se aprecia las bóvedas de crucería que soportan las galerías."));
-        arrayEntidad.add(new Entidad(R.drawable.dos, "Museo de las Guerras Carlistas", "Museos de historia", "Museo especializado en la epoca de las guerras carlistas, ya que el general Ramón Cabrera vivió durante unos años en Cantavieja, dejando gueeras tanto en Mirambel, como en Cantavieja. Todavía se conserva su casa y su escudo."));
-        arrayEntidad.add(new Entidad(R.drawable.trres, "Torre del campanario", "Lugares Historicos y Interes arquitectónico", "La torre es del siglo XVII, tiene un arco abierto en su base, que hace que la calle pase por debajo de ella, y además no solo tiene una de las vistas mas atractivas del pueblo y sus alrededores, sino que tambien tiene una exposición de lo que era una escuela antaño, en uno de los pisos y en otro también esta expuestos los mecanismos del reloj de la torre"));
-        arrayEntidad.add(new Entidad(R.drawable.cuatro, "Oficina de turismo", "Centros de visitantes", ""));
-        arrayEntidad.add(new Entidad(R.drawable.cinco, "Ayuntamiento de Cantavieja", "Interés arquitectonico ", ""));
-        arrayEntidad.add(new Entidad(R.drawable.seis, "Iglesia de San Miguel", "Iglesisa y catedrales", ""));
-        arrayEntidad.add(new Entidad(R.drawable.siete, "Iglesia de la Asuncion", "Iglesias y catedrales", ""));
-        arrayEntidad.add(new Entidad(R.drawable.ocho, "Castillo Templario", "Castillos", ""));
-        arrayEntidad.add(new Entidad(R.drawable.nueve, "Nevera Mediaval", "Zonas históricas", ""));
-        arrayEntidad.add(new Entidad(R.drawable.diez, "Muralla del Antiguo Pueblo", "Ruinas Antiguas", ""));
-        arrayEntidad.add(new Entidad(R.drawable.once, "Mirador de San Miguel", "Miradores", ""));
+        arrayEntidad.add(new Entidad(R.drawable.ujno, getString(R.string.plazacristo), getString(R.string.interes), getString(R.string.primerdescripcion)));
+        arrayEntidad.add(new Entidad(R.drawable.dos, getString(R.string.guerrascarlistas), getString(R.string.museops), getString(R.string.museoespecializado)));
+        arrayEntidad.add(new Entidad(R.drawable.trres, getString(R.string.campanario), getString(R.string.lugaRES), getString(R.string.latorre)));
+        arrayEntidad.add(new Entidad(R.drawable.cuatro, getString(R.string.nosequedeturismo), getString(R.string.visitantes), getString(R.string.primerdescripcion)));
+        arrayEntidad.add(new Entidad(R.drawable.cinco, getString(R.string.ayuntamientocantavieja), getString(R.string.interes), getString(R.string.primerdescripcion)));
+        arrayEntidad.add(new Entidad(R.drawable.seis, getString(R.string.sanmiguel), getString(R.string.catedrles), getString(R.string.primerdescripcion)));
+        arrayEntidad.add(new Entidad(R.drawable.siete, getString(R.string.asuncion), getString(R.string.catedrles), getString(R.string.museoespecializado)));
+        arrayEntidad.add(new Entidad(R.drawable.ocho, getString(R.string.termplario), getString(R.string.castillos),getString(R.string.latorre)));
+        arrayEntidad.add(new Entidad(R.drawable.nueve, getString(R.string.nevera), getString(R.string.cositas), getString(R.string.primerdescripcion)));
+        arrayEntidad.add(new Entidad(R.drawable.diez, getString(R.string.antiguopueblo), getString(R.string.ruinas), getString(R.string.museoespecializado)));
+        arrayEntidad.add(new Entidad(R.drawable.once, getString(R.string.miradorsanmiguwel), getString(R.string.miradores), getString(R.string.latorre)));
 
         adaptador = new Adaptador(arrayEntidad, this);
         lstItems.setAdapter(adaptador);

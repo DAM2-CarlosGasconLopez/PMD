@@ -1,3 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Cantavieja</string>
+    <string name="title_activity_maps_cantavieja">MapsActivityCantavieja</string>
+    <string name = "hello_blank_fragment"> Hello blank fragment </string>
+    <string name = "entra_en_la_app_de_cantavieja"> Enter the Cantavieja App </string>
+    <string name = "bienvenid"> Welcome </string>
+    <string name = "e_mail"> E-mail </string>
+    <string name = "password"> Password </string>
+    <string name = "registrar"> Register </string>
+    <string name = "login"> Login </string>
+    <string name = "iniciar_sesion_con_google"> Sign in with Google </string>
+    <string name = "mi_cuenta"> My Account: </string>
+    <string name = "restaurantes"> Restaurants </string>
+    <string name = "localizacion"> Location </string>
+    <string name = "bandos"> Sides </string>
+    <string name = "turismo"> Tourism </string>
+    <string name = "cerrar_sesion"> Close Session </string>
+    <string name = "turismodecantavieja"> Tourism in Cantavieja </string>
+    <string name = "plazacristo"> Plaza de Cristo Rey </string>
+    <string name = "guerrascarlistas"> Carlist Wars Museum </string>
+    <string name = "campanario"> Bell tower </string>
+    <string name = "nosequedeturismo"> Tourist office </string>
+    <string name = "ayuntamientocantavieja"> Cantavieja City Council </string>
+    <string name = "sanmiguel"> Church of San Miguel </string>
+    <string name = "asuncion"> Church of the Assumption </string>
+
+    <string name = "termplario"> Templar Castle </string>
+    <string name = "nevera"> Mediaval fridge </string>
+    <string name = "antiguopueblo"> Old Town Wall </string>
+    <string name = "miradorsanmiguwel"> Mirador de San Miguel </string>
+    <string name = "interes"> Architectural Interest </string>
+    <string name = "catedrles"> Church and cathedrals </string>
+    <string name = "museops"> History museums </string>
+    <string name = "lugaRES"> Historic Places and Architectural Interest </string>
+    <string name = "visitantes"> Visitor centers </string>
+    <string name = "castillos"> Castles </string>
+    <string name = "cositas"> Historic areas </string>
+    <string name = "ruinas"> Ancient Ruins </string>
+    <string name = "miradores"> Viewpoints </string>
+    <string name = "primerdescripcion"> The square is a closed rectangular space supported on three sides by the aforementioned church, the Town Hall and the Bayle House. The arches that open onto the plaza are pointed and semicircular. In some sections you can see the ribbed vaults that support the galleries. </string>
+    <string name = "museoespecializado"> Museum specialized in the time of the Carlist wars, since General Ramón Cabrera lived for a few years in Cantavieja, leaving wars in both Mirambel and Cantavieja. His house and shield are still preserved. </string>
+    <string name = "latorre"> The tower is from the seventeenth century, it has an open arch at its base, which makes the street pass under it, and also not only has one of the most attractive views of the town and its surroundings , but also has an exhibition of what was a school in the past, in one of the floors and in another it is also exposed the mechanisms of the tower clock </string>
+    <string name = "fail"> Failed to CREATE a user </string>
+    <string name = "creado">The User HAS BEEN CREATED</string>
+    <string name = "fewsdf"> There is some INCOMPLETE field </string>
+    <string name = "dwdewedwed"> Can\'t create account </string>
+    <string name = "fwefwefwf"> My Account </string>
+    <string name="wdwdwdwdwdwdwd">Is there any empty field</string>
 </resources>

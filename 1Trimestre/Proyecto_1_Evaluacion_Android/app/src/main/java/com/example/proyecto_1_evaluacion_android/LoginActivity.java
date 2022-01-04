@@ -58,7 +58,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        setTitle("Login");
         txtEmailtext = findViewById(R.id.txtEmail);
         txtPasswdtext = findViewById(R.id.txtPaswwd);
         btnRegistrarbutton = findViewById(R.id.btnRegistrar);
@@ -184,13 +183,13 @@ public class LoginActivity extends AppCompatActivity {
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("FIREBASE", "signInWithEmail:failure", task.getException());
-                                Toast.makeText(LoginActivity.this,"ha fallado",
+                                Toast.makeText(LoginActivity.this,getString( R.string.dwdewedwed),
                                         Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
         }else{
-            Toast.makeText(LoginActivity.this, "campoincompleto", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, getString( R.string.fewsdf), Toast.LENGTH_SHORT).show();
         }
     }
     private void iraHome(String email, ProviderType tipoLogueo) {
@@ -214,17 +213,17 @@ public class LoginActivity extends AppCompatActivity {
                             if ( task.isSuccessful() ){
                                 // El registro es satisfactorio
                                 Log.i("FIREBASE","El usuario ha sido creado correctamente");
-                                Toast.makeText(LoginActivity.this, "El Usuario SE HA CREADO ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginActivity.this,getString( R.string.creado), Toast.LENGTH_SHORT).show();
                                 FirebaseUser user = firebaseAuth.getCurrentUser();
                             } else {
                                 Log.w("FIREBASE", "createUserWithEmailAndPassword: failure", task.getException());
-                                Toast.makeText(LoginActivity.this, "Ha fallado el CREARSE un usuario", Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginActivity.this, getString(R.string.fail), Toast.LENGTH_SHORT).show();
                             }
 
                         }
                     });
         }else{
-            Toast.makeText(LoginActivity.this, "R.string.camposIncompletos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, getString(R.string.wdwdwdwdwdwdwd), Toast.LENGTH_SHORT).show();
         }
     }
 

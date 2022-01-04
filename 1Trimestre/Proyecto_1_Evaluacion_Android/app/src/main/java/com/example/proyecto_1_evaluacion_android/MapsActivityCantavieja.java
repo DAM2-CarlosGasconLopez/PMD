@@ -27,6 +27,7 @@ public class MapsActivityCantavieja extends FragmentActivity implements OnMapRea
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+
         mapFragment.getMapAsync(this);
     }
 
@@ -46,6 +47,8 @@ public class MapsActivityCantavieja extends FragmentActivity implements OnMapRea
         // Add a marker in Sydney and move the camera
         LatLng ctvj = new LatLng(40.528, -0.405586);
         mMap.addMarker(new MarkerOptions().position(ctvj).title("Cantavieja"));
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ctvj,16));
     }
 }

@@ -90,7 +90,7 @@ public class restauranteeFragment extends Fragment {
             restauranteList.add(new Restaurante("Hotel Balfagon","https://media-cdn.tripadvisor.com/media/photo-s/08/10/f6/09/hotel-spa-balfagon.jpg",4.6f,"Av. Maestrazgo,20 Cantavieja"));
             restauranteList.add(new Restaurante("TapaVieja","https://media-cdn.tripadvisor.com/media/photo-s/10/c5/90/d1/img-20170923-wa0015-largejpg.jpg",3.9f,"Av. Aragón,5 Cantavieja"));
             restauranteList.add(new Restaurante("La Posada","https://www.turismomaestrazgo.com/wp-content/uploads/2015/07/pension-julian-4.jpg",4.2f,"Av. Las Tres Bylías,6 Cantavieja"));
-            restauranteList.add(new Restaurante("Cafetería Sandra","https://img.restaurantguru.com/r446-Cafeteria-Sandra-interior.jpg",4.4f,"C. Mayor,18 Cantavieja"));
+            restauranteList.add(new Restaurante("Cafetería Sandra","https://10619-2.s.cdn12.com/c8/Cafeteria-Sandra-Cantavieja-view.jpg?@m@t@s@d",4.4f,"C. Mayor,18 Cantavieja"));
             restauranteList.add(new Restaurante("Bar Teleclub","https://turismomaestrazgo.org/wp-content/uploads/2021/06/Bar-Cafeteri%CC%81a-Teleclub-Cantavieja-1.jpeg",4.1f,"Av. Aragón,1 Cantavieja"));
             restauranteList.add(new Restaurante("Bar Gasolinera","https://turismocantaviejatravel.files.wordpress.com/2018/06/f8bca-dsc_0066.jpg",3.8f,"Av. Maestrazgo,8 Cantavieja"));
 

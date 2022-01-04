@@ -1,6 +1,51 @@
 <resources>
-    <string name="app_name">Proyecto_1º_Evaluacion_Android</string>
+    <string name="app_name">Cantavieja</string>
     <string name="title_activity_maps_cantavieja">MapsActivityCantavieja</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="entra_en_la_app_de_cantavieja">Entra en la App de Cantavieja</string>
+    <string name="bienvenid">Bienvenid@</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="registrar">Registrar</string>
+    <string name="login">Login</string>
+    <string name="iniciar_sesion_con_google">Iniciar Sesion con Google</string>
+    <string name="mi_cuenta">Mi Cuenta:</string>
+    <string name="restaurantes">Restaurantes</string>
+    <string name="localizacion">Localizacion</string>
+    <string name="bandos">Bandos</string>
+    <string name="turismo">Turismo</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
+    <string name="turismodecantavieja">Turismo por Cantavieja</string>
+    <string name="plazacristo">Plaza de Cristo Rey</string>
+    <string name="guerrascarlistas">Museo de las Guerras Carlistas</string>
+    <string name="campanario">Torre del campanario</string>
+    <string name="nosequedeturismo">Oficina de turismo</string>
+    <string name="ayuntamientocantavieja">Ayuntamiento de Cantavieja</string>
+    <string name="sanmiguel">Iglesia de San Miguel</string>
+    <string name="asuncion">Iglesia de la Asuncion</string>
+
+
+    <string name="termplario">Castillo Templario</string>
+    <string name="nevera">Nevera Mediaval</string>
+    <string name="antiguopueblo">Muralla del Antiguo Pueblo</string>
+    <string name="miradorsanmiguwel">Mirador de San Miguel</string>
+    <string name="interes">Interes Arquitectonico</string>
+    <string name="catedrles">Iglesisa y catedrales</string>
+    <string name="museops">Museos de historia</string>
+    <string name="lugaRES">Lugares Historicos y Interes arquitectónico</string>
+    <string name="visitantes">Centros de visitantes</string>
+    <string name="castillos">Castillos</string>
+    <string name="cositas">Zonas históricas</string>
+    <string name="ruinas">Ruinas Antiguas</string>
+    <string name="miradores">Miradores</string>
+    <string name="primerdescripcion">La plaza es un espacio rectangular cerrado y asoportalado en tres de sus lados por la citada iglesia, la Casa Consistorial y la Casa Bayle. Los arcos que se abren a la plaza son apuntados y de medio punto. En algunos tramos se aprecia las bóvedas de crucería que soportan las galerías.</string>
+    <string name="museoespecializado">Museo especializado en la epoca de las guerras carlistas, ya que el general Ramón Cabrera vivió durante unos años en Cantavieja, dejando gueeras tanto en Mirambel, como en Cantavieja. Todavía se conserva su casa y su escudo.</string>
+    <string name="latorre">La torre es del siglo XVII, tiene un arco abierto en su base, que hace que la calle pase por debajo de ella, y además no solo tiene una de las vistas mas atractivas del pueblo y sus alrededores, sino que tambien tiene una exposición de lo que era una escuela antaño, en uno de los pisos y en otro también esta expuestos los mecanismos del reloj de la torre</string>
+    <string name="fail">Ha fallado el CREARSE un usuario</string>
+    <string name="creado">\"El Usuario SE HA CREADO \"</string>
+    <string name="fewsdf">Hay algun campo INCOMPLETO</string>
+    <string name="dwdewedwed">No se puede crear la cuenta</string>
+    <string name="fwefwefwf">Mi Cuenta</string>
+    <string name="wdwdwdwdwdwdwd">Hay algun campo vacio</string>
 </resources>

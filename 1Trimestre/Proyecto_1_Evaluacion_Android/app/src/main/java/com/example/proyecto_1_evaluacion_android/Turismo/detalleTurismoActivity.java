@@ -19,7 +19,7 @@ public class detalleTurismoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_turismo);
 
-        setTitle("Turismo por Cantavieja");
+        setTitle(getString(R.string.turismodecantavieja));
 
         item = (Entidad) getIntent().getSerializableExtra("item");
         if (item!=null){

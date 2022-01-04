@@ -30,7 +30,7 @@
             android:backgroundTint="@color/white"
             android:ems="10"
             android:foregroundTint="@color/black"
-            android:hint="E-mail"
+            android:hint="@string/e_mail"
             android:inputType="textEmailAddress"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:ems="10"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="@color/blue_dark"
-                android:text="Registrar"
+                android:text="@string/registrar"
                 android:textColor="@android:color/white" />
 
             <Space
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="@color/blue_dark"
-                android:text="Login"
+                android:text="@string/login"
                 android:textColor="@color/white" />
 
         </LinearLayout>
@@ -82,7 +82,7 @@
             android:layout_width="344dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/teal_200"
-            android:text="Iniciar Sesion con Google"
+            android:text="@string/iniciar_sesion_con_google"
             android:textColor="@color/white"
             app:icon="@drawable/googleg_standard_color_18"
             app:iconGravity="end"
@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
 
 
-        android:text="Entra en la App de Cantavieja"
+        android:text="@string/entra_en_la_app_de_cantavieja"
         android:textColor="@color/white"
         android:textSize="24dp"
         android:textStyle="bold"
@@ -112,7 +112,7 @@
         android:layout_height="wrap_content"
 
 
-        android:text="Bienvenid@"
+        android:text="@string/bienvenid"
         android:textColor="@color/white"
         android:textSize="24dp"
         android:textStyle="bold"

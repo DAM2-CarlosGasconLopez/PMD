@@ -59,7 +59,9 @@ public class Cuenta extends Fragment {
         Obj_editor.apply();
         Obj_editor.commit();
 
-        txt_Email.setText(email);
+        String[] array = email.split("@");
+
+        txt_Email.setText(array[0]);
 
 
 
