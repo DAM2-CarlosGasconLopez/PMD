@@ -20,8 +20,7 @@ class Listview2Screen extends StatelessWidget {
             title: Text(opciones[index]), 
             trailing: const Icon(Icons.arrow_forward_ios_outlined),
             onTap: () {
-              var marca = opciones[index];
-              print(marca);
+              Navigator.pushNamed(context, 'home');
             },
             ); 
           
