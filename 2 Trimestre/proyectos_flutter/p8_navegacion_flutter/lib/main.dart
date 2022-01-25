@@ -11,10 +11,10 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       // home: HomeScreen(),
       theme: ThemeData.light().copyWith(
-        primaryColor: Colors.green,
+        primaryColor: Colors.orange,
         appBarTheme: const AppBarTheme(
           elevation: 0,
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.orange,
         )
       ),
       initialRoute: 'pantalla1',

@@ -7,13 +7,14 @@ class pantalla_1Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(title: const Text("Pantalla Inicio"),),
       body:  ListView(
         children: [
           ListTile(
             title    : const Text("Pantalla 3"),
             leading  : const Icon(Icons.screenshot_outlined),
-            trailing : const Icon(Icons.arrow_back_ios_outlined),
+            trailing : const Icon(Icons.keyboard_arrow_right_sharp),
             onTap: () => Navigator.pushNamed(context, 'pantalla3'),
           ),
 
@@ -22,8 +23,9 @@ class pantalla_1Screen extends StatelessWidget {
           ListTile(
             title    : const Text("Pantalla 4"),
             leading  : const Icon(Icons.screenshot_outlined),
-            trailing : const Icon(Icons.arrow_back_ios_outlined),
+            trailing : const Icon(Icons.keyboard_arrow_right_sharp),
             onTap: () => Navigator.pushNamed(context, 'pantalla4'),
+            
           ),
 
         ],

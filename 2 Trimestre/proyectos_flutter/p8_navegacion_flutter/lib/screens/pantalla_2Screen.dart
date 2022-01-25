@@ -6,10 +6,18 @@ class pantalla_2Screen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-         child: Text('pantalla_2Screen'),
-      ),
+    return Scaffold(
+       appBar: AppBar(title: const Text("Pantalla 2"),),
+      body:  ListView(
+        children: [
+          ListTile(
+            title    : const Text("Ir a la Pantalla 5"),
+            leading  : const Icon(Icons.screenshot_outlined),
+            trailing : const Icon(Icons.keyboard_arrow_right_sharp),
+            onTap: () => Navigator.pushNamed(context, 'pantalla5'),
+          ),
+        ]
+      )
     );
   }
 }
