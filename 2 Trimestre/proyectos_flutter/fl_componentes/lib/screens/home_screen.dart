@@ -1,3 +1,4 @@
+import 'package:fl_componentes/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,7 +13,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           ListTile(
             title    : const Text("Lista Tipo 1"),
-            leading  : const Icon(Icons.list),
+            leading  : const Icon(Icons.list_alt, color: AppTheme.primary,),
             trailing : const Icon(Icons.arrow_back_ios_outlined),
             onTap: () => Navigator.pushNamed(context, 'lista1'),
           ),
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
 
          ListTile(
             title    : const Text("Lista Tipo 2"),
-            leading  : const Icon(Icons.list),
+            leading  : const Icon(Icons.list_alt_sharp),
             trailing : const Icon(Icons.arrow_back_ios_outlined),
             onTap: () => Navigator.pushNamed(context, 'lista2'),
           ),
@@ -28,7 +29,7 @@ class HomeScreen extends StatelessWidget {
 
          ListTile(
             title    : const Text("Alerta"),
-            leading  : const Icon(Icons.list),
+            leading  : const Icon(Icons.align_vertical_bottom),
             trailing : const Icon(Icons.arrow_back_ios_outlined),
             onTap: () => Navigator.pushNamed(context, 'alerta'),
           ),
@@ -36,7 +37,7 @@ class HomeScreen extends StatelessWidget {
 
          ListTile(
             title    : const Text("Card"),
-            leading  : const Icon(Icons.list),
+            leading  : const Icon(Icons.card_giftcard),
             trailing : const Icon(Icons.arrow_back_ios_outlined),
             onTap: () => Navigator.pushNamed(context, 'card'),
           ),

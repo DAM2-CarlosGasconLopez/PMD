@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.green,
         )
       ),
-      initialRoute: 'home',
+      initialRoute: 'pantalla1',
       routes: {
         'pantalla1' : ( BuildContext context ) => pantalla_1Screen(),
         'pantalla2' : ( BuildContext context ) => pantalla_2Screen(),

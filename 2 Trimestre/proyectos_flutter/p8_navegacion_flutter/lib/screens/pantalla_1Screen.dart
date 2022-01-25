@@ -6,10 +6,28 @@ class pantalla_1Screen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-         child: Text('pantalla_1Screen'),
-      ),
+    return  Scaffold(
+      appBar: AppBar(title: const Text("Pantalla Inicio"),),
+      body:  ListView(
+        children: [
+          ListTile(
+            title    : const Text("Pantalla 3"),
+            leading  : const Icon(Icons.screenshot_outlined),
+            trailing : const Icon(Icons.arrow_back_ios_outlined),
+            onTap: () => Navigator.pushNamed(context, 'pantalla3'),
+          ),
+
+          const Divider(),
+
+          ListTile(
+            title    : const Text("Pantalla 4"),
+            leading  : const Icon(Icons.screenshot_outlined),
+            trailing : const Icon(Icons.arrow_back_ios_outlined),
+            onTap: () => Navigator.pushNamed(context, 'pantalla4'),
+          ),
+
+        ],
+      )
     );
   }
 }

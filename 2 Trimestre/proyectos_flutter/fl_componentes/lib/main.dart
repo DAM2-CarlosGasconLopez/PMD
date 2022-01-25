@@ -1,4 +1,6 @@
 
+import 'package:fl_componentes/themes/app_theme.dart';
+
 import 'screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -12,13 +14,7 @@ class MyApp extends StatelessWidget {
 
       title: 'Material App',
       //home: HomeScreen(),
-      theme: ThemeData.light().copyWith(
-        primaryColor: Colors.green,
-        appBarTheme: const AppBarTheme(
-          elevation: 0,
-          backgroundColor: Colors.yellow,
-        )
-      ),
+      theme: AppTheme.lightTheme,
       initialRoute: 'home',
       routes: {
         'home'  : (BuildContext context ) => const HomeScreen(),
