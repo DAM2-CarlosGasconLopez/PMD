@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           ListTile(
             title    : const Text("Lista Tipo 1"),
-            leading  : const Icon(Icons.list_alt, color: AppTheme.primary,),
+            leading  : const Icon(Icons.list_alt,),
             trailing : const Icon(Icons.arrow_back_ios_outlined),
             onTap: () => Navigator.pushNamed(context, 'lista1'),
           ),
@@ -40,6 +40,14 @@ class HomeScreen extends StatelessWidget {
             leading  : const Icon(Icons.card_giftcard),
             trailing : const Icon(Icons.arrow_back_ios_outlined),
             onTap: () => Navigator.pushNamed(context, 'card'),
+          ),
+         const Divider(),
+
+         ListTile(
+            title    : const Text("Formulario"),
+            leading  : const Icon(Icons.face_outlined),
+            trailing : const Icon(Icons.arrow_back_ios_outlined),
+            onTap: () => Navigator.pushNamed(context, 'form'),
           ),
          const Divider(),
          
