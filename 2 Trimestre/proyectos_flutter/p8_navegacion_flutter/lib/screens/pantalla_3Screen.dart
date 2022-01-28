@@ -6,10 +6,28 @@ class pantalla_3Screen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-         child: Text('pantalla_3Screen'),
-      ),
+    return Scaffold(
+     appBar: AppBar(title: const Text("Pantalla 3"),),
+      body:  ListView(
+        children: [
+          ListTile(
+            title    : const Text("Pantalla 1"),
+            leading  : const Icon(Icons.screenshot_outlined),
+            trailing : const Icon(Icons.keyboard_arrow_right_sharp),
+            onTap: () => Navigator.pushNamed(context, 'pantalla1'),
+          ),
+
+          const Divider(),
+
+          ListTile(
+            title    : const Text("Pantalla 2"),
+            leading  : const Icon(Icons.screenshot_outlined),
+            trailing : const Icon(Icons.keyboard_arrow_right_sharp),
+            onTap: () => Navigator.pushNamed(context, 'pantalla2'),
+          ),
+
+        ],
+      )
     );
   }
 }
