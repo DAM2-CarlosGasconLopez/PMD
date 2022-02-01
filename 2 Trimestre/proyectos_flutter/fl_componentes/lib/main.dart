@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         'lista2' : (BuildContext context ) =>  Listview2Screen(),
         'alerta' : (BuildContext context ) => const AlertScreen(),
         'card'   : (BuildContext context ) => const CardScreen(),
-        'form'   : (BuildContext context ) => const FormularioScreen(),
+        'form'   : (BuildContext context ) => FormularioScreen(),
       },
     );
   }
