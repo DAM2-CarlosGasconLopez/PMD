@@ -17,11 +17,12 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       initialRoute: 'home',
       routes: {
-        'home'  : (BuildContext context ) => const HomeScreen(),
-        'lista1': (BuildContext context ) =>  Listview1Screen(),
-        'lista2': (BuildContext context ) =>  Listview2Screen(),
-        'alerta': (BuildContext context ) => const AlertScreen(),
-        'card'  : (BuildContext context ) => const CardScreen(),
+        'home'   : (BuildContext context ) => const HomeScreen(),
+        'lista1' : (BuildContext context ) =>  Listview1Screen(),
+        'lista2' : (BuildContext context ) =>  Listview2Screen(),
+        'alerta' : (BuildContext context ) => const AlertScreen(),
+        'card'   : (BuildContext context ) => const CardScreen(),
+        'form'   : (BuildContext context ) => FormularioScreen(),
       },
     );
   }
