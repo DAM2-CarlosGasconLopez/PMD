@@ -1,5 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fl_componentes">
+
+     <!-- Always include this permission -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+  <!-- Include only if your app benefits from precise location access. -->
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
    <application
         android:label="fl_componentes"
         android:name="${applicationName}"
@@ -29,6 +35,9 @@
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data
             android:name="flutterEmbedding"
-            android:value="2" />
+            android:value="2"/>
+            
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyAmf5zKJrtgPWI9zSk4c7bk5sIfSL2A3-8"/>
     </application>
 </manifest>
